@@ -175,11 +175,16 @@ nav {
   padding: 3% 1%;
   align-items: center;
 }
+nav h1 {
+  margin: 0% 24% 0% 0%;
+}
 nav a {
   justify-content: space-evenly;
   line-height: 1.5;
   font-size: 1.6rem;
   text-decoration: none;
+  margin: 0% 2% 0% 0%;
+  color: black;
 }
 .footer {
   width: 100%;
