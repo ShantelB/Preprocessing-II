@@ -1,23 +1,39 @@
 // Navigation Styles here
 
-nav {
+nav{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    padding: 3% 1%;
-    align-items: center;
     border-bottom: 2px dashed @silver;
+    border-width: 100%;
+    padding: 2%;
+    
+
+    @media(max-width:500px){
+        flex-direction: column;
+    }
 
     h1 {
-        margin: 0% 24% 0% 0%;
+        
+
+        @media (max-width:500px){
+            text-align: center;
+        }
     }//Closing bracket for h1
 
-    a {
-        justify-content: space-evenly;
-        line-height: 1.5;
+   div {
+      a{  line-height: 1.5;
         font-size: 1.6rem;
         text-decoration: none;
-        margin: 0% 2% 0% 0%;
-        color: black;
+        color: black;}
+        display: flex;
+            justify-content: space-around;
+            width: 80%;
+        
+        @media (max-width:500px){
+            width: 100%;
+        }
+        
     }//Closing brackets for a
+       
+   
 }//Closing brackets for nav

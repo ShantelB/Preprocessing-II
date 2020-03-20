@@ -1,16 +1,19 @@
 .home {
-
   .header {
     h2 {
       padding: 2% 0%;
-    }//Closing bracket for h2
+
+    } //Closing bracket for h2
 
     p {
       padding-bottom: 2%;
       border-bottom: 2px dashed @silver;
-    }
+    } //Closing bracket for p
 
-  }//Closing bracket for header
+    @media (max-width: 500px) {
+      padding: 0% 5%;
+    } //Closing bracket to @media
+  } //Closing bracket for header
 
   .content-section {
     margin: 30px 0;
@@ -18,11 +21,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
     
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media (max-width:500px){
+      width:90%;
+    }
+
     }
 
     .img-content {
@@ -31,9 +39,15 @@
 
       img {
         border-radius: 10px;
-      }
-    }
-  }
+      } //Closing bracket for img
+    } //Closing bracket for .img-content
+
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    } // closing bracket for media
+  } //Closing bracket for content section
 
   .inverse-content {
     padding-bottom: 30px;
@@ -42,13 +56,16 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
-    }
+    } //Closing brackets for .text-content
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+    } //Closing bracket for .img-content
+    @media (max-width: 500px) {
+      flex-direction: column-reverse;
     }
-  }
+  } //Closing bracket for.inverse-content
 
   .content-destination {
     width: 75%;
@@ -68,6 +85,27 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
-  }
-}// home
+
+      @media (max-width:500px){
+        width:90%;
+      }
+
+      .btn {
+        padding: 4%;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        margin: 0%;
+        font-size: 1.75rem;
+        padding: 4% 16% 6% 11%;
+        .sign(@button-bg, @button-text);
+      }
+    } //Closing bracket for destination
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+      
+    } //Closing bracket for @media
+  } //Closing bracket for .content-pick
+} //home
