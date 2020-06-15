@@ -1,1 +1,39 @@
 // Navigation Styles here
+
+nav{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px dashed @silver;
+    border-width: 100%;
+    padding: 2%;
+    
+
+    @media(max-width:500px){
+        flex-direction: column;
+    }
+
+    h1 {
+        
+
+        @media (max-width:500px){
+            text-align: center;
+        }
+    }//Closing bracket for h1
+
+   div {
+      a{  line-height: 1.5;
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: black;}
+        display: flex;
+            justify-content: space-around;
+            width: 80%;
+        
+        @media (max-width:500px){
+            width: 100%;
+        }
+        
+    }//Closing brackets for a
+       
+   
+}//Closing brackets for nav

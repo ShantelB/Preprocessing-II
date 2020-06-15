@@ -1,4 +1,19 @@
 .home {
+  .header {
+    h2 {
+      padding: 2% 0%;
+
+    } //Closing bracket for h2
+
+    p {
+      padding-bottom: 2%;
+      border-bottom: 2px dashed @silver;
+    } //Closing bracket for p
+
+    @media (max-width: 500px) {
+      padding: 0% 5%;
+    } //Closing bracket to @media
+  } //Closing bracket for header
 
   .content-section {
     margin: 30px 0;
@@ -6,22 +21,39 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
     
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media (max-width:500px){
+      width:90%;
+    }
+
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media (max-width: 500px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
       img {
         border-radius: 10px;
-      }
-    }
-  }
+      } //Closing bracket for img
+    } //Closing bracket for .img-content
+
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    } // closing bracket for media
+  } //Closing bracket for content section
 
   .inverse-content {
     padding-bottom: 30px;
@@ -30,17 +62,31 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
-    }
+    } //Closing brackets for .text-content
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media (max-width:500px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    } //Closing bracket for .img-content
+    @media (max-width: 500px) {
+      flex-direction: column-reverse;
+      width: 100;
     }
-  }
+  } //Closing bracket for.inverse-content
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media (max-width: 500px){
+      width: 90%; 
+    }
 
     img {
       border-radius: 10px;
@@ -56,6 +102,32 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
-  }
-}// home
+
+      @media (max-width:500px){
+        width:75%;
+      }
+
+      .btn {
+        padding: 4%;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        margin: 0%;
+        font-size: 1.75rem;
+        padding: 4% 16% 6% 11%;
+        .sign(@button-bg, @button-text);
+        
+        a{
+          text-decoration: none;
+          color: white;
+        }
+      }
+    } //Closing bracket for destination
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+      
+    } //Closing bracket for @media
+  } //Closing bracket for .content-pick
+} //home
